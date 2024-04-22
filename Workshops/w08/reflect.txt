@@ -1,0 +1,43 @@
+1. Designing functions to return values in two different ways (via an argument and/or by return) increases usability and flexibility in certain scenarios.
+
+Benefit: 
+    This approach provides our caller function with two options to decide on how they want to receive the functions result. While some may prefer to retrieve the result directly
+    from the return value, others may find it more convenient to retrieve the result through the argument. This flexible nature permits different coding styles.
+    hence, making the function more usable and adaptable to a variety of situations. By providing multiple ways to return the result of a function, the 
+    function becomes more flexible, for example, if we want our caller function just retrieve the result once and without making any changes, we can simply.
+    use the return value. Conversely, if we want our caller function to make additional calculations and or modify the result before using it, we can retrieve.
+    the result via an argument (pointer) which evaluates the “data at the address” and makes it possible to alter certain changes.
+
+Drawback:
+    However, A negative aspect of designing functions to work this is that it may make the functions usage more complex and error prone. Also, this design approach 
+    may lead to less readable and less self-explanatory code. It may be less clear to other developers how to interact with the function, especially if the functions.
+    behavior is not well documented or if there is no consistent convention for using the return value versus the argument.
+     
+In summary, the advantage of providing multiple ways to return values from a function is that it increases usability and flexibility which allows us to choose the most. 
+suitable approach based on the specific requirement. However, this can add more complexity and reduce readability if not used carefully, hence making it harder to understand.
+and maintain code.
+
+
+2. Cohesion describes the focus. According to the principles of structured programming, a highly cohesive function should perform one task and only that task.
+    For this workshop, I personally think the "convertLbs" function exhibits LOW COHESION. This is because the convertsLbs function converts the received argument representing. 
+    the pounds value (lbs) to both kilograms(kg) and grams(g). This means it performs more than one task which is converting from pounds to kilograms and to grams. A highly cohesive
+    function should perform just a single task. In such a case, I will take out the function from my application since I already have the "convertsLbsKg" and ""convertsLbsG" 
+    doing the conversion independently.
+
+   Coupling refers to the degree of interrelatedness of a module with other modules. The less information that passes between the modules and other modules, the better the design.
+    For this workshop, I think the "calculateReportData" function exhibits to an extent a high degree of coupling. It depends on the convertsLbsKg, convertlbsG, costPerServing
+    and other functions to determine its execution. To solve this, I will transfer data to the module and let it create its own tables and variables to complete the task.
+
+
+
+3. The C compiler passes objects of structure type by value of the argument. It copies the value of the argument in the function call into the parameter, as it initial value.
+    Any changes made within the function's body affect only the copy and not the original value. 
+    To increase efficiency, we pass an object by address. This avoids copying all member values, saving time and space especially in cases where the where a member is an array. 
+    with many elements. Passing an object by address only copies the address, which typically occupies 4 bytes.
+    
+   - Handle the possibility of NULL or invalid data: Check for NULL or invalid data in the CatFoodInfo structure before displaying its contents. We can add error handling or provide.
+     default values for missing or invalid data to ensure that the function behaves correctly even with incomplete or corrupted data.
+
+   - We can also use appropriate formatting tables and labels.
+
+

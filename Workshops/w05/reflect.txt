@@ -1,0 +1,31 @@
+1.
+
+ -Maintainability: Using variables and macros improves the maintainability of my code. If I need to change a value or adjust a calculation, I only need to modify it in one location. 
+  For example, in my code, I have three macros (MAX_YEAR 2022, MIN_YEAR 2012 and LOG_DAYS 3). If any of these values have to be changed, I do not have to make changes in every part of the code.
+  I can simply change the assigned value and it will apply to all parts where the macros are used in the code.
+
+ -Debugging and testing: By using variables and macros to represent information rather than hardcode, it makes it easy for me to identify potential problems and validate the correctness of my code.
+  If I encounter issues when debugging my code, say for example while calculating the averages of the ratings where I divide the total ratings by the macro LOG_DAYS 3, if I do not get the expected output,
+  I can easily check the log value to identify the error.
+
+ -Readability: Macros and Variables provide us with meaningful names that make our code more understandable to us and to other programmers.
+  The names used are very descriptive which makes it easy to represent the purpose of the code. This facilitates modification of the code when necessary.
+  A good example is the MIN_YEAR 2012 and MAX_YEAR 2022 macros. Just by having a look at this, we can tell that we have a range of years we are working with. 
+  We have a maximum value which is 2022 and a minimum value which is 2012. This sets boundaries for input validation and makes the code easy to read.
+
+2.
+ 
+ Placing the sum and average logic outside of any validation routine and separating it from the iteration that performs basic validations can be considered a better design for the following reasons, considering the details of this workshop:
+
+ -By separating the validation logic from the sum and average calculation, each part of the code can focus on its specific task.
+  Again, as previously mentioned, this improves the code readability and maintainability because keeping them separate, it becomes easier to reason about each part independently and make changes without impacting other parts of the code. 
+  If we were to include additional logic that sums and performs the average of the morning and evening ratings, the code will become so complex that it will be difficult to identify errors in the calculation. 
+  The iterations provide us with valid input of the ratings to be used in the calculation.
+
+ -Placing the sum and average logic outside the validation routine enhances code reusability. By separating the calculation logic, I can easily reuse it in other parts of the code or in different workshops.
+  For instance, if I need to calculate the average of a different set of values, I can reuse the existing calculation code without duplicating it. This saves time and reduces the chance of introducing errors.
+
+ -To conclude, separating the sum and average logic from the validation routines in this workshop provides better design since it promotes code readability and maintainability.
+  It also facilitates code reusability, allowing for easy reuse and extension of the existing logic to accommodate future requirements. While doing some more extensive research based on the reflection question of this workshop,
+  I came across the Open-Closed Principle (OCP), which states that code should be open for extension but closed for modification.
+  By adhering to this principle, the code becomes more maintainable and less likely to introduce bugs or errors when new features are added.

@@ -1,0 +1,38 @@
+1.
+The three types of iteration constructs used in C is made of the while loop,the do while loop and the for loop. Although we can make any one of them behave the same way, each one has
+it's own unique features which makes it more suitable to use in a particular situation.
+
+   In my code, the do while loop is used in used various situations such as prompting the user for input like the monthNetIncome, costOfitem, priorityFilter and numItems validate it.  
+This enables me to continiously prompt the user for input until a valid input is entered and I am able to display an error message each time a wrong input is entered. The do while loop
+is good because it allows the user to enter input before the condition is checked. This ensures that the we can execute a code block atleast once.
+I did not use the while loop in this workshop but the while loop is used when we are uncertain about the number of iterations and we want to keep looping untill a given condition is met.
+
+   On the other hand, the for loop is used when we are certain about the number of times we want iterate.
+Typically, the for loop is the more preferred iteration construct when working with arrays. This is because arrays have have a fixed length and we know the number of elements already. 
+I used the for loop in my code to iterate the elements of the arrays (costOfitem, priorityOfitem and fiance). It is prefered in this case becauses the number of iterations is known in advance since 
+it is determined by the "numItems" variable.When working with arrays, we usually access elements at a specific index or position. The for loop provides a way to control the loop index variable 
+which can be use to acces the elements of the array easily. For example, with the for loop, I am able to access the element at index i of the array called costOfitem.
+The for loop provides the intialization, condition and update on a single line, making it easy to read and idenfify and not only array members but maintainability and readability of my code.
+
+
+2.
+After I finished coding, I compiled my code. The compiler revealed all the syntactic errors such as a missing semicolon and unmatched parentheses. The error messages generated at the bottom of my
+IDE(Visual Studio) indicated the lines where the errors where found in the code and I just went to the line and corrected them.
+
+Again, to check for semantic errors, I ran the program and used the sample submission data provided for in the workshop to check the behaviour of the code. I mostly focused on boudaries where 
+where input validation was required. This helped determined if I was applying the correct logic and the program was able to handle different scenarios.
+Also, I was able to make sure I did not create infinite loops and my loops actually ended when a condition was satisfied.
+
+Visual Studio has Debugger option which enabled me to do a walkthrough of the code. With the Debugger, I was able to set breakpoints and examine the code line after line. 
+This helped me to check variables and identify the exact location of errors and correct them.
+
+
+3. 
+I will use the PSEUDOCODE below to identify and fix the error are
+Step 1: Go back to my code
+Step 2: Locate line number 6 where I prompt the user to Enter the monthly NET income
+Step 3: Locate column number 33 by counting up to the 33rd column character of line number 6
+Step 4: Identify in the printf statement the variable responsible for printing the output monthly NET income
+Step 5: Revise the calculation applied to get the variable of monthly NET income being displayed and save the changes made 
+Step 6: Correct the calculation 
+Step 7: and recompile and run the program to make sure the outputs match.

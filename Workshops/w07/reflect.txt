@@ -1,0 +1,43 @@
+1.  No
+    Although the code outputs as expected, I was unable to avoid non-repetitive sections of the logic in the game play portion of this workshop. Especially when drawing the ruler, board and player position.
+    It was difficult to combine so many nested iterations and access the members of the arrays and structures. I struggled to track the locations and previous positions entered by the player. 
+    Each time the loop was completed, the value representing the locations and previous history positions disappeared. Also, I had issues managing the process flow of the program in the game play execution.
+
+2.  Structures enhance the the organization and management of complex data. We use the structure type to define a group of variables as a single object. This ensures maintainability and readability of our code. 
+    In this week's workshop, I made a game in C in which I used 2(two) user defined data types called PlayerInfo and GameInfo to store the player and game configuration settings respectively. Both had 4 members each.
+
+    An alternative approach to using structures will be to define individual variables to store each and every data item. As you can see, this approach becomes very cumbersome and repetitive. 
+    In this week's workshop, using this appraoach will require 8 different variables. This might seem okay but it becomes much more difficult when we begin to deal with a very large amount of data.
+    It becomes very hard to keep track of related data.
+    
+    However, using structures, I was able to create two user defined data types to contain all the variables I need. With this, I was able to access multiple instances to represent the different data items.
+
+3.  Three(03) levels of nesting
+
+
+    do
+     {
+        if (characterCount == 0) 
+        {
+           
+        }
+        else
+        {
+           
+            for (k = 0; k < game.pathLength; k++) 
+            {
+                if (currentPosition[k] == player.playerCharacter)
+                {
+                    
+                }
+                else
+                {
+                   
+                }
+            }
+        }
+
+     } while  (livesLeft >= 0 && movesLeft >= 0); 
+
+
+  

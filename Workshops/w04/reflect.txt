@@ -1,0 +1,24 @@
+1. 
+I used the Do while loop to iterate (Repeat a process) based on the conditional expressions which I set set the limits and boundaries for the iteration (Repeatition).  
+By executing a sequence at least once and  checking the condition at the beginning of each iteration, I can control the loop's execution. 
+I used the Do While loops because it is particularly helpful when the number of iterations is uncertain as it executes the code atleast once and checks the condition to continue.
+In my code, all the selected logic parts and iteration parts are inside a mother Do while iteration. The mother do  while iteration construct with the condition to "buyMoreitems".
+
+
+
+2. 
+
+Nesting is the process of enclosing one logic inside another. We can enclose a selection inside another selection which will be reffered to as a nested selection. 
+In my code, I used the if selection construct to determine that the value which was being entered for the needed quantity of a given item was greater than 0 so as to ensure that an error message is displayed in case a negative value is entered.
+Inside the if selection construct, I also nested other alternative selection constructs (else if and else) to check that the value being entered was not exceeding the needed quantity and limiting the quantity only what was initially declared as the needed quantity and controlling when to exit the loop.
+
+Also, we can nest an interation inside another iteration inside another iteration which will be reffered to as nested iteration. In my code, I nested the  while iteration inside inside the do while iteration. 
+The do while iteration is the much larger iteration construct and inside of it are multiple iterations to be executed in order ensure that ony valid entries are entered.
+
+
+3.
+
+Using the a series of "if" optional paths construct will make the code difficult to read and maintain. 
+This is because, as the number of conditions continue to increase, it will be difficult to find where the relationship exits between the conditions.
+Using the a series of "if" optional paths construct will result to a situation where, when one condition is checked, all other conditions will also need to be checked.
+This is because even if one condition is checked and is true, it was checked without taking into consideration the other conditions and hence leads to a repetitive process which uses a lot of space and time.

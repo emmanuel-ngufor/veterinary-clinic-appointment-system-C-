@@ -1,0 +1,43 @@
+1 Below is a brief description of some additional functions I created to aid my Veterinarian Clinic System Application.
+
+-int upcomingSlotAvailable (struct Appointment *app, int maxAppointments);
+	The purpose of this function is to determine the index position of the next available slot for a new appointment. It uses a for loop to iterate through the Appointment struct array and identifies the next available slot by checking
+	if the patient number is less than 1. A return value of 1 indicates the slot is available meanwhile a return value of 0 indicates the slot is not available By searching and returning the index position of the next open slot,
+        it ensures that new appointments can be scheduled without deleting old existing records, hence contributing to the overall appointment scheduling process.
+
+-int scheduleSlotOpen(struct Date date, struct Time time, struct Appointment *app, int maxAppointment);
+	The purpose of this function is to determine whether a particular time slot is available for scheduling an appointment. It checks the Appointment struct array for appointments that match the given date and time.
+        In case of a match, it returns the error code that the slot is not available. This function was valuable in preventing double or conflicting scheduling. By doing so, I can ensure that the user can only book an appointment in during
+        slots which are available, and do not clash.
+
+-void sort(struct Appointment appoints[], int max0;
+ 	The purpose of this function is to arrange the appointment records in an ascending order based on the parameters of the date and time. It does this by converting the date and time values into a more interpretable way 
+        such as minutes which makes it easier to compare. This function uses the bubble sort technique which compares and swaps the Appointment struct array which comprises of day, month, min, hour and year. 
+        It then converts them into minutes to be able to sort them and transforms them back to their original values after the sorting process. This helped me significantly to have a chronological order which is easy to read and manage.
+
+
+
+2. I was not able to code my solution in my clinic.c module to achieve at most one scanf function call. I did manage to reduce my scanf function calls to a minimum of 5.
+   However, in the clinic.c module, the number of scanf calls were purposely and significantly minimized because of the availability of helper functions already defined. 
+   Reducing the number of scanf calls helped achieve the following. 
+   Firstly, Input Validation : it enabled me to be able to validate input after each call to make sure that it matches the specific format and clear the buffer so as to get optimize user experience with the program and reduce errors.
+   Secondly, code readability and maintainability, multiple scanf function calls make code harder to read and understand. Writing clean code that others can read and understand is a principle of structured design.
+   Again, buffering and input issues are reduced. Since scanf reads input from the buffer and uses the buffer to store that input until a new line character is entered, if the input does not match the expected format,
+   incorrect data will be left in the buffer which may lead to unexpected behaviors in subsequent scanf calls or other parts of the code. 
+
+
+
+3. -int upcomingSlotAvailable (struct Appointment *app, int maxAppointments);
+	I placed this function under the clinic.c module because it is part of the Appointment management processes. Placing it here ensures it is logically grouped with other related functions which enhances code maintainability 
+        and readability.  This was meant to also make sure that the function can interact with predefined internal data structures within the code base. 
+
+   -int scheduleSlotOpen(struct Date date, struct Time time, struct Appointment *app, int maxAppointment);
+	This function was also placed in the clinic.c module because it is part of the Appointment management processes too. This placement avoids mixing different concerns within the entire code. 
+        It ensures the Appointment specific operations are isolated from unrelated functions in the codebase such as display functions. 
+
+   -void sort(struct Appointment appoints[], int max0;
+	The placement of this function in the clinic.c module specifically under utility functions was mainly influenced by its value and purpose already described in question 1.
+        Factors such as code reusability, code maintainability, encapsulation for the code to interact with internal data structures, logical grouping and modularity all were the considerations for this placement. 
+
+
+

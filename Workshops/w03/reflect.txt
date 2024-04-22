@@ -1,0 +1,39 @@
+1. ((proDuct1 == 'l' || proDuct1 == 'L') && (strenghtOfcoffee == 'l' || strenghtOfcoffee == 'L')), ((dailyServings >= 1 && dailyServings <= 4) &&
+        (bagWeight1 > 0 && bagWeight1 <= 250)), ((withCream1 == 'y' || withCream1 == 'Y') && (suggestCream == 'Y' || suggestCream == 'y')));
+
+    printf(" 2|      %d          |      %d      |   %d   |\n", ((proDuct2 == 'l' || proDuct2 == 'L') && (strenghtOfcoffee == 'l' || strenghtOfcoffee == 'L')), ((dailyServings >= 5 && dailyServings <= 9) &&
+        (bagWeight2 > 0 && bagWeight2 <= 500)), ((withCream2 == 'y' || withCream2 == 'Y') && (suggestCream == 'Y' || suggestCream == 'y')));
+
+    printf(" 3|      %d          |      %d      |   %d   |\n", ((proDuct3 == 'l' || proDuct3 == 'L') && (strenghtOfcoffee == 'l' || strenghtOfcoffee == 'L')), ((dailyServings >= 10) &&
+        (bagWeight3 > 0 && bagWeight3 <= 1000)), ((withCream3 == 'y' || withCream3 == 'Y') && (suggestCream == 'Y' || suggestCream == 'y')));
+
+
+
+
+  A.  5 Relational Expressions
+
+    == : both operands are equal
+    >= : left side operand is greater than or equal the right side operand
+    <= : left side operand is less than or equal the right side operand
+    >  : left side operand is greater than the right side operand
+    <  : left side operand is less than the right side operand
+
+  B. 2 Logical Expressions
+
+    && : both operands are equal
+    || : one of the operands is not true
+
+2. 
+  Method used: product3ID != product1ID && product3ID != product2ID
+
+  De Morgan's Law:  !(product3ID == product1ID || product3ID == product2ID)
+  Other method: product3ID != product1ID || product3ID != product2ID
+
+3.  
+   const double GRAMS_IN_LBS = 453.5924;
+    char proDuct1, proDuct2, proDuct3, strenghtOfcoffee, suggestCream, withCream1, withCream2, withCream3;
+    int bagWeight1, bagWeight2, bagWeight3,dailyServings;
+    
+    
+
+  

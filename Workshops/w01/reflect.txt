@@ -1,0 +1,3 @@
+﻿1.     I had no programming experience prior to this. The introduction to programming was too fast since I could not understand in class. Upon using resources online, I am catching up.
+2.     Computers understand instructions in binary in order to perform tasks. We code in a high level language which is converted into Binary (0 and 1) for the computer to perform our tasks. This is made possible by compilers.
+3.     I want to be able to write and run programs, create softwares. I need this for a future in computer aided drug discovery.

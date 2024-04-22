@@ -1,0 +1,44 @@
+1. a)
+
+   The reason why price1 and its converted cent value does not accurately represent the intended value is due to the limitations of floating-point representation.
+   In this case, the decimal value 17.96 cannot be represented precisely as a binary fraction.
+   When I print price1 using %f,  it displays a value a little bit different from the expected 17.96. 
+   This is because the the float data type representation of 17.96 introduces a small rounding error.
+   
+
+   b)
+
+   On the contrary, the other samples (price2, price3, and price4) work as expected because they are declared as double variables.
+   The double data type provides more precision compared to float, giving room for decimal values to be presented accurately.
+   The double data type can represent 17.96 and 17.98 more accurately than the float data type.
+   When precise decimal representation is required, it is recommended to use a decimal type like double rather than float.
+
+2. a)
+   
+   In the first scenario, the integer "money" is implicitly promoted to a floating-point value before the division takes place.
+   This promotion is an example of implicit data type conversion,
+   where the integer value is converted to a floating-point value to match the  data type of the divisor.
+
+   In the second scenario, money is divided by the result of casting the integer 100 to a double data type.
+   The (double) is an explicit cast, where the integer 100 is explicitly converted to a double data type. 
+   This explicit cast ensures that the division operation involves two floating point values, money and (double)100, hence, the result is a floating-point value.
+
+   In the third scenario, the integer money is explicitly cast to a double data type before the division by the integer 100 takes place. 
+   The (double)money is an explicit cast that converts the integer money to a floating-point value. 
+   The division operation then occurs between two floating-point values, resulting in a floating-point value.
+
+3. a)
+   The value of the variable result is 72. "money" has a value of 7245, and dividing it by 100 results in 72.45.
+   Result is an integer variable, the fractional part is truncated, and the value of result becomes 72.
+   
+   b)
+   Sample 1: $72.00
+   Sample 2: $72
+   Sample 3: $72.00
+   Sample $: $72
+
+
+
+   c)
+   The printf function in samples 1 and 3 does not work as expected because there is no match between the format specifier used in the printf statement and the actual data type.
+   
